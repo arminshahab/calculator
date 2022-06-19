@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "GothamRounded";
+  src: url("./gothamfont.ttf");
+}
+
+* {
+  font-family: "GothamRounded";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #222, #888, #000);
+  user-select: none;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: minmax(105px, auto) repeat(5, 90px);
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.calculator-grid > button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #000;
+  color:  rgba(255, 255, 255, .85);
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.calculator-grid > button:hover {
+ background-color: rgba(0, 0, 0, .75);
+}
+
+.calculator-grid > button:active {
+  background-color: rgba(255, 215, 0, .11);
+
+}
+
+.output{
+  grid-column:  1/-1;
+  background-color: #000;
+  color: rgba(255, 255, 255, .85);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.3rem;
+}
